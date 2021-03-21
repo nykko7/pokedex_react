@@ -27,6 +27,7 @@ nav .catching-img {
 	width: 50px;
 	padding-right: 10px;
 	transition: all ease-in 0.2s;
+	transition: filter none 0;
 }
 nav .catching-container p {
 	margin: 0;
@@ -154,7 +155,7 @@ nav .catching-container:active .catching-img {
 .pagination-text {
 	font-weight: bold;
 	padding: 0 10px;
-	font-size: 18px;
+	font-size: 25px;
 	filter: drop-shadow(0 1px 0 #696969);
 }
 

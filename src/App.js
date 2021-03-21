@@ -2,7 +2,7 @@ import './styles.css';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
 import Pokedex from './components/Pokedex';
-import { getPokemonData, getPokemons, searchPokemon } from './api/PokeAPI';
+import { getPokemonData, getPokemons, getPokemonsData, getPokemonsName } from './api/PokeAPI';
 
 import React, { useState, useEffect } from 'react';
 import { CatchingProvider } from './contexts/catchingContext';
@@ -18,6 +18,7 @@ function App() {
 	const [caughtPokemons, setCaughtPokemons] = useState([]);
 	const [searching, setSearching] = useState(false);
 	const [viewCaught, setViewCaught] = useState(false);
+	const [pokemonsName, setPokemonsName] = useState([]);
 
 	const [notFound, setNotFound] = useState(false);
 
@@ -42,8 +43,14 @@ function App() {
 		setCaughtPokemons(pokemons);
 	};
 
+	const getPokemonsNames = async () => {
+		const pokeNames = await getPokemonsName();
+		setPokemonsName(pokeNames);
+	};
+
 	useEffect(() => {
 		loadCaughtPokemons();
+		getPokemonsNames();
 	}, []);
 
 	useEffect(() => {
@@ -64,6 +71,13 @@ function App() {
 		window.localStorage.setItem(localStorageKey, JSON.stringify(updated));
 	};
 
+	const searchOnPokemonsName = (text) => {
+		const filteredPokemons = pokemonsName.filter((name) => {
+			return name.indexOf(text) > -1;
+		});
+		return filteredPokemons;
+	};
+
 	const onSearch = async (pokemon) => {
 		if (!pokemon) {
 			return fetchPokemons();
@@ -71,12 +85,12 @@ function App() {
 		setLoading(true);
 		setNotFound(false);
 		setSearching(true);
-		const result = await searchPokemon(pokemon);
+		const result = await getPokemonsData(searchOnPokemonsName(pokemon));
 		if (!result) {
 			setNotFound(true);
 			setLoading(false);
 		} else {
-			setPokemons([result]);
+			setPokemons(result);
 			setPage(0);
 			setTotal(1);
 		}
@@ -85,7 +99,6 @@ function App() {
 	};
 
 	const renderCaught = async () => {
-		console.log('Pokeball button pressed !');
 		if (!viewCaught) {
 			try {
 				setViewCaught(true);
