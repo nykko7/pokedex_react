@@ -12,10 +12,10 @@ const Navbar = ({ onClickPokeball }) => {
 	};
 	return (
 		<nav>
-			<div />
 			<div>
 				<img src={imgUrl} alt='PokeApi Title' className='navbar-image' />
 			</div>
+			<div className='navbar-space'></div>
 			<div onClick={onClick} className='catching-container'>
 				<img className='catching-img' src={pokeball} alt='pokeball' /> <p>{caughtPokemons.length}</p>
 			</div>

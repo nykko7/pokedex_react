@@ -20,25 +20,19 @@ const Pokemon = ({ pokemon }) => {
 			<div className='pokemon-img-container'>
 				<img className='pokemon-img' src={urlImg} alt={`${pokemon.name}`} />
 			</div>
-			<div className='card-body'>
-				<div className='card-top'>
-					<h3>{pokemon.name}</h3>
-					<div className='card-id'># {pokemon.id}</div>
-				</div>
-				<div className='card-bottom'>
-					<div className='pokemon-types'>
-						{pokemon.types.map((type, idx) => {
-							return (
-								<div key={idx} className='pokemon-types-text'>
-									{type.type.name}
-								</div>
-							);
-						})}
-					</div>
-					<div className='pokemon-caught'>
-						<img src={pokeball} alt='Pokeball' />
-					</div>
-				</div>
+			<h3 className='card-id'># {('000' + pokemon.id).substr(-3)}</h3>
+			<h3 className='card-name'>{pokemon.name}</h3>
+			<div className='pokemon-types'>
+				{pokemon.types.map((type, idx) => {
+					return (
+						<div key={idx} className='pokemon-types-text'>
+							{type.type.name}
+						</div>
+					);
+				})}
+			</div>
+			<div className='pokemon-caught'>
+				<img src={pokeball} alt='Pokeball' />
 			</div>
 		</div>
 	);

@@ -23,7 +23,7 @@ const Pokedex = ({ pokemons, page, setPage, total, loading }) => {
 					<div className='loader'></div>
 				</div>
 			) : (
-				<div className='pokedex-grid'>
+				<div className='pokedex-container'>
 					{pokemons.map((pokemon, idx) => {
 						return <Pokemon pokemon={pokemon} key={pokemon.name} />;
 					})}
