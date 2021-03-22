@@ -25,7 +25,7 @@ const Pokemon = ({ pokemon }) => {
 			<div className='pokemon-types'>
 				{pokemon.types.map((type, idx) => {
 					return (
-						<div key={idx} className='pokemon-types-text'>
+						<div key={idx} className={`pokemon-types-text ${type.type.name}`}>
 							{type.type.name}
 						</div>
 					);

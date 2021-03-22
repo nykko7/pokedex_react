@@ -1,3 +1,28 @@
+/* COLORS */
+:root {
+	--bug: #729f3f;
+	--dragon: #53a4cf;
+	--dragon-gradient: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+	--fairy: #fdb9e9;
+	--fire: #fd7d24;
+	--ghost: #7b62a3;
+	--ground: #f7de3f;
+	--ground-gradient: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+	--normal: #a4acaf;
+	--psychic: #f366b9;
+	--steel: #9eb7b8;
+	--dark: #707070;
+	--electric: #eed535;
+	--fighting: #d56723;
+	--flying: #3dc7ef;
+	--flying-gradient: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+	--grass: #9bcc50;
+	--ice: #51c4e7;
+	--poison: #b97fc9;
+	--rock: #a38c21;
+	--water: #4592c4;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 
 body {
@@ -188,12 +213,13 @@ nav .catching-container:active .catching-img {
 }
 
 .pokemon-card {
+	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 	width: 250px;
-	height: 300px;
+	height: 340px;
 	margin: 10px;
 	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
@@ -204,6 +230,7 @@ nav .catching-container:active .catching-img {
 
 .pokemon-card:hover {
 	cursor: url('https://cdn.custom-cursor.com/db/249/32/arrow2282.png'), auto;
+	border-width: 2px;
 }
 .pokemon-card:active {
 	cursor: url('https://cdn.custom-cursor.com/db/250/32/arrow2282.png'), auto;
@@ -234,8 +261,79 @@ nav .catching-container:active .catching-img {
 }
 
 .pokemon-types-text {
-	margin: 0 10px;
+	padding: 3px 7px;
+	margin: 0 3px;
+	border: solid 1px black;
+	border-radius: 5px;
 	text-transform: capitalize;
+}
+
+.bug {
+	color: #fff;
+	background-color: var(--bug);
+}
+.dragon {
+	color: #fff;
+	background-color: var(--dragon);
+	background: var(--dragon-gradient);
+}
+.fairy {
+	background-color: var(--fairy);
+}
+.fire {
+	color: #fff;
+	background-color: var(--fire);
+}
+.ghost {
+	color: #fff;
+	background-color: var(--ghost);
+}
+.ground {
+	background-color: var(--ground);
+	background: var(--ground-gradient);
+}
+.normal {
+	background-color: var(--normal);
+}
+.psychic {
+	color: #fff;
+	background-color: var(--psychic);
+}
+.steel {
+	background-color: var(--steel);
+}
+.dark {
+	color: #fff;
+	background-color: var(--dark);
+}
+.electric {
+	background-color: var(--electric);
+}
+.fighting {
+	color: #fff;
+	background-color: var(--fighting);
+}
+.flying {
+	background-color: var(--flying);
+	background: var(--flying-gradient);
+}
+.grass {
+	background-color: var(--grass);
+}
+.ice {
+	background-color: var(--ice);
+}
+.poison {
+	color: #fff;
+	background-color: var(--poison);
+}
+.rock {
+	color: #fff;
+	background-color: var(--rock);
+}
+.water {
+	color: #fff;
+	background-color: var(--water);
 }
 
 .pokemon-caught img {
@@ -256,25 +354,6 @@ nav .catching-container:active .catching-img {
 
 .card-name {
 	font-size: 25px;
-}
-
-.card-body {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	padding: 10px;
-	flex: 1;
-}
-
-.card-top {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.card-body h3 {
-	margin: 0;
 }
 
 .loader-container {
