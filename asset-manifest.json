@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/pokedex_react/static/css/main.5aacb77e.chunk.css",
+    "main.js": "/pokedex_react/static/js/main.cf8feef5.chunk.js",
+    "main.js.map": "/pokedex_react/static/js/main.cf8feef5.chunk.js.map",
+    "runtime-main.js": "/pokedex_react/static/js/runtime-main.b77b4bd3.js",
+    "runtime-main.js.map": "/pokedex_react/static/js/runtime-main.b77b4bd3.js.map",
+    "static/js/2.6f4e2389.chunk.js": "/pokedex_react/static/js/2.6f4e2389.chunk.js",
+    "static/js/2.6f4e2389.chunk.js.map": "/pokedex_react/static/js/2.6f4e2389.chunk.js.map",
+    "static/js/3.6da0777f.chunk.js": "/pokedex_react/static/js/3.6da0777f.chunk.js",
+    "static/js/3.6da0777f.chunk.js.map": "/pokedex_react/static/js/3.6da0777f.chunk.js.map",
+    "index.html": "/pokedex_react/index.html",
+    "static/css/main.5aacb77e.chunk.css.map": "/pokedex_react/static/css/main.5aacb77e.chunk.css.map",
+    "static/js/2.6f4e2389.chunk.js.LICENSE.txt": "/pokedex_react/static/js/2.6f4e2389.chunk.js.LICENSE.txt",
+    "static/media/black-pokeball.c3d9fe59.png": "/pokedex_react/static/media/black-pokeball.c3d9fe59.png",
+    "static/media/red-pokeball.13568f53.png": "/pokedex_react/static/media/red-pokeball.13568f53.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b77b4bd3.js",
+    "static/js/2.6f4e2389.chunk.js",
+    "static/css/main.5aacb77e.chunk.css",
+    "static/js/main.cf8feef5.chunk.js"
+  ]
+}
